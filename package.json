@@ -1,19 +1,18 @@
 {
-  "name": "ngx-perfect-scrollbar-ang16",
+  "name": "ngx-perfect-scrollbar-angula",
   "description": "Angular wrapper library for Perfect Scrollbar (Angular 16 Compatible)",
-  "bugs": "https://github.com/brakmic/ngx-perfect-scrollbar-portable/issues",
-  "version": "0.0.0",
+  "version": "2.2.0",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "ng": "ng",
     "lint": "ng lint",
     "start": "ng serve app",
-    "build": "ng build lib --configuration production",
-    "build:app": "ng build lib --configuration production",
+    "build": "npm run build:lib && npm run build:demo",
+    "build:demo": "ng build app --aot --configuration production",
+    "build:lib": "ng build ngx-perfect-scrollbar --configuration production",
     "deploy": "deploy-to-git",
     "prepare": "ng build lib",
-    "publish": "cd dist/lib && cp ../../README.md . && pnpm publish ",
+    "publish": "npm publish --access=public ./dist/lib",
     "predeploy": "rimraf ./dist/app && mkdirp ./dist/app"
   },
   "stylelint": {
@@ -21,18 +20,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/brakmic/ngx-perfect-scrollbar-portable.git"
+    "url": "https://github.com/RaghavITBD/ngx-perfect-scrollbar-ang16.git"
   },
   "config": {
     "deployToGit": {
-      "repository": "git@github.com:brakmic/ngx-perfect-scrollbar-portable.git",
+      "repository": "https://github.com/RaghavITBD/ngx-perfect-scrollbar-ang16.git",
       "branch": "gh-pages",
       "folder": "dist/app",
-      "script": "ng build app --prod -- --base-href=ngx-perfect-scrollbar-portable --delete-output-path=false",
+      "script": "ng build app --prod -- --base-href=ngx-perfect-scrollbar-ang16 --delete-output-path=false",
       "commit": "Publishing $npm_package_version",
       "user": {
-        "name": "Harris Brakmic",
-        "email": "brakmic@gmail.com"
+        "name": "Raghav Gupta",
+        "email": "guptaraghav946@gmail.com"
       }
     }
   },

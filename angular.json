@@ -3,21 +3,21 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lib": {
+    "ngx-perfect-scrollbar": {
       "projectType": "library",
-      "root": "projects/lib",
-      "sourceRoot": "projects/lib/src",
+      "root": "projects/ngx-perfect-scrollbar",
+      "sourceRoot": "projects/ngx-perfect-scrollbar/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/lib/tsconfig.json",
-            "project": "projects/lib/ng-package.json"
+            "tsConfig": "projects/ngx-perfect-scrollbar/tsconfig.json",
+            "project": "projects/ngx-perfect-scrollbar/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/lib/tsconfig.json"
+              "tsConfig": "projects/ngx-perfect-scrollbar/tsconfig.json"
             }
           },
           "defaultConfiguration": "production"
@@ -26,8 +26,8 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/lib/**/*.ts",
-              "projects/lib/**/*.html"
+              "projects/ngx-perfect-scrollbar/**/*.ts",
+              "projects/ngx-perfect-scrollbar/**/*.html"
             ]
           }
         }
