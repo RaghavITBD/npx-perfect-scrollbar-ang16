@@ -1,0 +1,13 @@
+/.angular/cache
+dist/
+bundles/
+
+package/
+npm-debug.log
+node_modules/
+
+example/dist/
+example/npm-debug.log
+example/node_modules/
+
+.nx/
